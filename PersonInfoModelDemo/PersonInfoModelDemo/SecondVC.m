@@ -18,10 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, 150)];
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, 300)];
     label.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:label];
-    label.text = [NSString stringWithFormat:@"姓名：%@，年龄：%@，班级：%@",[PersonInfoModel currentUser].name,[PersonInfoModel currentUser].age,[PersonInfoModel currentUser].className];
+    label.numberOfLines = 0;
+    label.text = [NSString stringWithFormat:@"数据模型已创建\n姓名：%@\n年龄：%@\n班级：%@",[PersonInfoModel currentUser].name,[PersonInfoModel currentUser].age,[PersonInfoModel currentUser].className];
     label.textColor = [UIColor blackColor];
 }
 

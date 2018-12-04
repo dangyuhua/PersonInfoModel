@@ -60,7 +60,7 @@
         [self.navigationController pushViewController:vc animated:YES];
     }else{
         [[PersonInfoModel currentUser]setClassName:[NSString stringWithFormat:@"%u班",arc4random()]];
-        self.label.text = [NSString stringWithFormat:@"数据模型已创建\n姓名：%@\n年龄：%@\n班级：%@",[PersonInfoModel currentUser].name,[PersonInfoModel currentUser].age,[NSString stringWithFormat:@"%u班",arc4random()]];
+        self.label.text = [NSString stringWithFormat:@"数据模型已创建\n姓名：%@\n年龄：%@\n班级：%@",[PersonInfoModel currentUser].name,[PersonInfoModel currentUser].age,[PersonInfoModel currentUser].className];
     }
 }
 
